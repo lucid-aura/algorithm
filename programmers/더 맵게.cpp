@@ -6,12 +6,12 @@
 using namespace std;
 
 
-vector<int> insert(vector<int> heap, int value){
+vector<unsigned long long> insert(vector<unsigned long long> heap, unsigned long long value){
     heap.push_back(value);
     int idx = heap.size()-1;
     while(idx > 1){
         if (heap[idx] < heap[idx/2]){
-            int temp = heap[idx];
+            unsigned long long temp = heap[idx];
             heap[idx] = heap[idx/2];
             heap[idx/2] = temp;
         }
@@ -20,9 +20,9 @@ vector<int> insert(vector<int> heap, int value){
     return heap;
 }
 
-vector<int> pop(vector<int> heap){
+vector<unsigned long long> pop(vector<unsigned long long> heap){
     int size = heap.size()-1;
-    int result = heap[1];
+    unsigned long long result = heap[1];
     heap[1] = heap[heap.size()-1];
     heap.pop_back();
 
@@ -47,7 +47,7 @@ vector<int> pop(vector<int> heap){
             //왼쪽 오른쪽 자식 전부 있음.
             int child = (heap[left] > heap[right] ? right : left);
             if (heap[idx] > heap[child]){
-                int temp = heap[idx];
+                unsigned long long temp = heap[idx];
                 heap[idx] = heap[child];
                 heap[child] = temp;
             }
@@ -62,7 +62,7 @@ vector<int> pop(vector<int> heap){
     return heap;
 }
 int solution(vector<int> scoville, int K) {
-    vector<int> heap;
+    vector<unsigned long long> heap;
     heap.push_back(-1);
     int answer = 0;
     //sort(scoville.begin(), scoville.end());
@@ -77,18 +77,18 @@ int solution(vector<int> scoville, int K) {
     cout << '\n';
     */
 
-    int del1 = heap[1];
+    unsigned long long del1 = heap[1];
     while (del1 < K){
 
         heap = pop(heap);
 
-        int del2 = heap[1];
+        unsigned long long del2 = heap[1];
         if (heap.size() < 2) {answer = -1; break;}
         heap = pop(heap);
 
         heap = insert(heap, del1+del2*2);
         del1 = heap[1];
-
+        cout << del1 << '\n';
         answer++;
     }
     
@@ -110,7 +110,7 @@ int main()
 	ios::sync_with_stdio(false);
 	vector<int> scoville = {1, 2, 3, 9, 10, 12};
     int K = 1000000000;
-    scoville = {100000,100001,100002};
+    scoville = {999999,999998,999992};
     solution(scoville, K);
 	return 0;
 }
