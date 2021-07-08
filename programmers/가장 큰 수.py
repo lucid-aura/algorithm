@@ -1,27 +1,41 @@
 numbers = [6, 10, 2]
 numbers = [3, 30, 34, 5, 9]
-numbers = [9,98,987,9876,98765, 0]
-numbers = [10, 11, 21, 3]
-numbers = [2,20,200]
-numbers = [40,403]
-#numbers = [9,98,987,9876,98765, 0, 1]
-answer = ""
-intlen = []
-maxval = []
-for i in numbers:
-    intlen.append(len(str(i)))
-for i in range(len(numbers)):
-    maxval.append(str(numbers[i])[0])
-    print(maxval[i])
+answer = ''
+sorting = []
 
-print((300//10)%10)
-sorting = sorted(numbers, key=lambda x:str(x)[0], reverse= True)
-if sorting[0] == 0:
-    answer = "0"
-for i in sorting:
-    answer += str(i)
-print(answer)
+#for i, v in enumerate(numbers): #1 가장 높은 자리수 숫자 뽑아내기.
+    #sorting.append(v // pow(10, len(str(v))-1))
+#1. 가장 높은 자리수의 숫자 비교
+# -> 가장 높은 자리수의 숫자를 뽑아내야함.
+# -> 가장 높은 자리수가 같은 숫자들은 다음 자리수 값들로 비교(한자리수는 그대로)
+# -> 뽑는 다는 것이 필요없는(낮은거로 판별된) 원소는 원본 리스트에서 없애는 것?
+#2. 차례대로 높은 자리수의 숫자 비교
 
-#다른 자리수라도 각각 첫 자리부터 봐서 sort 해야함.
-for i in numbers:
-    print(len(str(i)))
+
+result = []
+
+# while(len(numbers) > 0):
+#     for i, v in enumerate(numbers): # [index, value]
+#         # result.append([i,v//pow(10, len(str(v))-1)])
+#         result.append([i,v])
+#     sorted(result, key=lambda x:(x[1]//pow(10, len(str(x[1]))-1), len(str(x[1])), reverse=True)
+#     # sorted(result, reverse=True)
+#     for i in result:
+#         print(i)
+#         if i[1] == 0:
+#             sorting.append(numbers[i][v])
+#             numbers.pop(i[0])
+#     result.clear()
+
+for i, v in enumerate(numbers): # [index, value]
+        # result.append([i,v//pow(10, len(str(v))-1)])
+    result.append([i,v])
+result = sorted(result, key=lambda x:x[1]//pow(10, len(str(x[1]))-1), reverse=True)
+for i in range(len(result)):
+    if result[i][0] != result[i+1][0]:
+        pass
+# result = sorted(result, key=lambda x: x[1]//pow(10, len(str(x[1]))-1), reverse=True)
+for i in result:
+    print(i)
+
+#return answer

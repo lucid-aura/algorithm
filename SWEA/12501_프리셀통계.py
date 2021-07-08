@@ -41,9 +41,19 @@ T = int(input())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
 for test_case in range(1, T + 1):
     # ///////////////////////////////////////////////////////////////////////////////////
-    '''
-
-        이 부분에 여러분의 알고리즘 구현이 들어갑니다.
-
-    '''
+    N, pD, pG = map(int, input().split())
+    output = "Broken"
+    if pD != 100 and pG == 100:
+        print("#" + str(test_case) + " " + output)
+    elif pD != 0 and pG == 0:
+        print("#" + str(test_case) + " " + output)
+    elif N < 100:
+        for i in range(1, N + 1):
+            if (pD * i) % 100 == 0:
+                output = "Possible"
+                break
+        print("#" + str(test_case) + " " + output)
+    else:
+        print("#" + str(test_case) + " Possible")
+    
     # ///////////////////////////////////////////////////////////////////////////////////
