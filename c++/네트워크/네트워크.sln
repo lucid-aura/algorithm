@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "네트워크", "네트워크\네트워크.vcxproj", "{FCAE1483-1C02-4CDC-A97B-5D0A59F4202D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCAE1483-1C02-4CDC-A97B-5D0A59F4202D}.Debug|x64.ActiveCfg = Debug|x64
+		{FCAE1483-1C02-4CDC-A97B-5D0A59F4202D}.Debug|x64.Build.0 = Debug|x64
+		{FCAE1483-1C02-4CDC-A97B-5D0A59F4202D}.Debug|x86.ActiveCfg = Debug|Win32
+		{FCAE1483-1C02-4CDC-A97B-5D0A59F4202D}.Debug|x86.Build.0 = Debug|Win32
+		{FCAE1483-1C02-4CDC-A97B-5D0A59F4202D}.Release|x64.ActiveCfg = Release|x64
+		{FCAE1483-1C02-4CDC-A97B-5D0A59F4202D}.Release|x64.Build.0 = Release|x64
+		{FCAE1483-1C02-4CDC-A97B-5D0A59F4202D}.Release|x86.ActiveCfg = Release|Win32
+		{FCAE1483-1C02-4CDC-A97B-5D0A59F4202D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F83A121-BCDC-4C39-935B-D39FDB8F3D93}
+	EndGlobalSection
+EndGlobal
