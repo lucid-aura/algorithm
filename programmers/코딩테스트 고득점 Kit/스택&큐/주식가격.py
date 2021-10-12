@@ -2,11 +2,11 @@ def solution(prices):
     answer = []
     price = 0
     prices.reverse()
-    for i in prices:
-        if (price < i):
-
-        #price = i
-            answer.append(0)
+    for i in range(len(prices)):
+        if i  == 0:
+            answer.append(i)
+        else:
+            
 
     print(prices)
 
