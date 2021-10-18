@@ -19,6 +19,24 @@ def solution(n, wires):
         answer = min(answer, abs(n- 2*length))
     return answer
 
+
+# def solution(n, wires):
+#     def match(wire):
+#         node = {wire[0][0], wire[0][1]}
+#         for i in wire:
+#             if i[0] in node or i[1] in node:
+#                 node.add(i[0])
+#                 node.add(i[1])
+#         return len(node)
+    
+#     answer = len(wires)
+#     if answer == 1:
+#         return 0
+#     for i in range(len(wires)):
+#         wire = wires[0:i] + wires[i+1:n]
+#         print(wire, match(wire),n - match(wire)*2)
+#         answer = min(answer, abs(n - match(wire)*2))
+
 n = 9
 wires = [[1,3],[2,3],[3,4],[4,5],[4,6],[4,7],[7,8],[7,9]]
 solution(n, wires)
